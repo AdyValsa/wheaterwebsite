@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 
+import Button from "../Button";
 import subscribeStyle from './Subscribe.module.css'
 
 const Subscribe = ()=>{
@@ -29,7 +30,7 @@ return(
     <form onSubmit={submit}>
         <label htmlFor="name">Name:</label>
         <input type="text" name="name" placeholder="enter your name" required={true} onChange={handleChange}/>
-        <button type="submit" className="btn">Submit</button>
+        <Button type="submit"> Subscribe</Button>
     </form>
     </section>
     
