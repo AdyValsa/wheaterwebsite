@@ -3,6 +3,8 @@ import React from "react";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
+import Subscribe from "./Components/Subscribe/Subscribe";
+import './App.css'
 
 
 function App() {
@@ -10,6 +12,7 @@ function App() {
     <div>
       <Header/>
       <Main />
+      <Subscribe />
       <Footer/>
     </div>
    

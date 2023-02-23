@@ -2,7 +2,7 @@ import React from "react";
 
 const Subscribe = ()=>{
 return(
-    <section>
+    <section id='subscribe'>
         <p>Subscribe to receive our weather newsletter:</p>
     <form>
 
