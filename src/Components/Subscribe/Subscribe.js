@@ -21,15 +21,47 @@ const Subscribe = ()=>{
        let jsonName = (JSON.stringify(user.name));
        let jsonCity = (JSON.stringify(user.city));
        alert(`Great ${JSON.parse(jsonName)}, we will send you weather information about ${JSON.parse(jsonCity)} on your email!`)
-
+       setUser({
+        name: '',
+        email:'',
+        city: ''
+    })
     }
 
+    const inputs = [
+        {id:1,
+        type:'text',
+        name:'name',
+        placeholder: 'enter your name',
+        required: true,
+         },
+        {id:2,
+        type:'email',
+        name:'email',
+        placeholder: 'enter your email',
+        required: true,
+        },
+        {id:3,
+        type:'text',
+        name:'city',
+        placeholder: 'enter your city of interest',
+        required: true,
+        }
+    ]
+
+    const inputsForm = inputs.map(input =>{
+        return (
+        <div key={input.id}>
+            <label htmlFor={input.name}>{input.name}:</label>
+            <input type={input.type} name={input.name} placeholder={input.placeholder} required={input.required} onChange={handleChange} value={user.name}/>
+        </div>
+        )
+    })
 return(
     <section id='subscribe' className={subscribeStyle.subscribe}>
-        <h2>Subscribe to receive our weather newsletter:</h2>
+        <h2 className={subscribeStyle.title}>Subscribe to receive our weather newsletter:</h2>
     <form onSubmit={submit}>
-        <label htmlFor="name">Name:</label>
-        <input type="text" name="name" placeholder="enter your name" required={true} onChange={handleChange}/>
+      {inputsForm}
         <Button type="submit"> Subscribe</Button>
     </form>
     </section>
