@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import style from "./Search.module.css"
+
 const Search = (props) => {
     const { onNewCity } = props;
     const [search, setSearch] = useState('');
@@ -19,7 +21,7 @@ const Search = (props) => {
         <div>
 
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="city name" onChange={handleChange}>
+                <input type="text" placeholder="city name" onChange={handleChange} className={style.searchbar}>
                 </input>
                 <label><button>Search</button></label>
             </form>
