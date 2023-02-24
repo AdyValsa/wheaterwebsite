@@ -3,11 +3,10 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
-import Main from "./Components/Main/Main";
-import Subscribe from "./Components/Subscribe Page/Subscribe";
-import Error from "./Components/Error";
-import './App.css'
 
+import Main from "./Components/main/Main";
+import Subscribe from "./Components/Subscribe/Subscribe";
+import './App.css'
 
 
 function App() {
