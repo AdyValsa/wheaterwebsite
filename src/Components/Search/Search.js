@@ -25,7 +25,7 @@ const Search = (props) => {
                 <input type="text" placeholder="city name" onChange={handleChange} className={style.searchbar}>
                 </input>
                 <label>
-                    <Button />
+                    <Button >Search</Button>
                 </label>
             </form>
         </div>

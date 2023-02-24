@@ -3,9 +3,10 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
+import Error from "./Components/Error";
 
-import Main from "./Components/main/Main";
-import Subscribe from "./Components/Subscribe/Subscribe";
+import Main from "./Components/Main/Main";
+import Subscribe from "./Components/Subscribe Page/Subscribe";
 import './App.css'
 
 
