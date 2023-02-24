@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 
 import Button from "../Button";
+import Input from "./Input";
 import subscribeStyle from './Subscribe.module.css'
 
 const Subscribe = ()=>{
@@ -51,10 +52,7 @@ const Subscribe = ()=>{
 
     const inputsForm = inputs.map(input =>{
         return (
-        <div key={input.id}>
-            <label htmlFor={input.name}>{input.name}:</label>
-            <input type={input.type} name={input.name} placeholder={input.placeholder} required={input.required} onChange={handleChange} value={user.name}/>
-        </div>
+        <Input {...input} onChange={handleChange} value={user[input.name]}/>
         )
     })
 return(
