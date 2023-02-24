@@ -21,3 +21,8 @@ a:hover{
     border-radius: 5px;
     margin:1rem;
 }
+
+.active{
+    display: none;
+}
+
