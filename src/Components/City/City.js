@@ -8,9 +8,9 @@ const City = ({ name, main }) => {
     return (
         <div>
 
-            <h2>{name}</h2>
-            <h3>{main?.temp}</h3>
-            <p>Max: {main?.temp_max}  Min:{main?.temp_min}</p>
+            <h1>{name}</h1>
+            <h2>{Math.round(main?.temp)} °C</h2>
+            <p>Max: {Math.round(main?.temp_max)}  Min:{Math.round(main?.temp_min)}</p>
 
         </div>
     )
