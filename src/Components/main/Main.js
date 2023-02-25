@@ -14,7 +14,7 @@ const Main = () => {
 
   const handledraft = (newCity) => {
     setDraft(newCity);
-    console.log(newCity);
+    // console.log(newCity);
   }
 
   async function fetchData() {
