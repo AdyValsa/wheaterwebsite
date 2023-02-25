@@ -18,6 +18,7 @@ This project was an assignment of our Integrify Bootcamp where we could work in 
     - useNavigate()
     - useEffect()
     - create your own hook
+    - stopPropagation()
     - fetching an API with Fetch
     - fetching an API with axios
     - post and delete on an API
@@ -31,4 +32,4 @@ This project was an assignment of our Integrify Bootcamp where we could work in 
 
 
 
-You can check the project ready [here](ADD LINK HERE)!
+You can check the project video [here](ADD LINK HERE)!
