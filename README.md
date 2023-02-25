@@ -32,4 +32,4 @@ This project was an assignment of our Integrify Bootcamp where we could work in 
 
 
 
-You can check the project video [here](ADD LINK HERE)!
+You can check the project's video [here](https://youtu.be/zdw_-N67uJU)!
