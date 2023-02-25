@@ -3,6 +3,9 @@ import React, {useState} from "react";
 import Button from "../Button";
 import Input from "./Input";
 import subscribeStyle from './Subscribe.module.css'
+import useFetch from "./API/useFetch";
+import Post from "./API/Post";
+import Delete from "./API/Delete";
 
 const Subscribe = ()=>{
     const [user, setUser] = useState({
@@ -18,7 +21,12 @@ const Subscribe = ()=>{
     }
 
     const submit =(e)=>{
+        e.stopPropagation()
         e.preventDefault();
+        Post({name: user.name,
+        email:user.email,
+        body: user.city,
+        userId: 1,})
        let jsonName = (JSON.stringify(user.name));
        let jsonCity = (JSON.stringify(user.city));
        alert(`Great ${JSON.parse(jsonName)}, we will send you weather information about ${JSON.parse(jsonCity)} on your email!`)
@@ -27,6 +35,7 @@ const Subscribe = ()=>{
         email:'',
         city: ''
     })
+
     }
 
     const inputs = [
@@ -52,15 +61,26 @@ const Subscribe = ()=>{
 
     const inputsForm = inputs.map(input =>{
         return (
-        <Input {...input} onChange={handleChange} value={user[input.name]}/>
+        <Input {...input} onChange={handleChange} value={user[input.name]} key={input.id}/>
         )
     })
+
+    useFetch('https://jsonplaceholder.typicode.com/comments')
+
+
+    const handleDelete =(email, event)=>{
+        event.stopPropagation();
+        event.preventDefault();
+        Delete(email)
+        alert('You have been unsubscribed');
+    }
 return(
     <section id='subscribe' className={subscribeStyle.subscribe}>
         <h2 className={subscribeStyle.title}>Subscribe to receive our weather newsletter:</h2>
-    <form onSubmit={submit}>
+    <form>
       {inputsForm}
-        <Button type="submit"> Subscribe</Button>
+        <Button type="submit" onClick={submit}> Subscribe</Button>
+        <Button type='submit' onClick={(event)=>{handleDelete(user.email,event)}}>Unsubscribe</Button>
     </form>
     </section>
     
