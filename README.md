@@ -17,7 +17,10 @@ This project was an assignment of our Integrify Bootcamp where we could work in 
     - useState()
     - useNavigate()
     - useEffect()
+    - create your own hook
+    - fetching an API with Fetch
     - fetching an API with axios
+    - post and delete on an API
     - router
     
     
