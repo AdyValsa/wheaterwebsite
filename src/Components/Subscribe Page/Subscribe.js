@@ -27,9 +27,9 @@ const Subscribe = ()=>{
         email:user.email,
         body: user.city,
         userId: 1,})
-       let jsonName = (JSON.stringify(user.name));
-       let jsonCity = (JSON.stringify(user.city));
-       alert(`Great ${JSON.parse(jsonName)}, we will send you weather information about ${JSON.parse(jsonCity)} on your email!`)
+       let jsonName = user.name;
+       let jsonCity = user.city;
+       alert(`Great ${jsonName}, we will send you weather information about ${jsonCity} on your email!`)
        setUser({
         name: '',
         email:'',
