@@ -14,21 +14,22 @@ const Main = () => {
 
   const handledraft = (newCity) => {
     setDraft(newCity);
-    // console.log(newCity);
-  }
 
-  async function fetchData() {
-    try {
-      const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${draft}&appid=ed55b36e362d8733f7d859247cedeaf2&units=metric`)
-      setCities(response.data)
-    } catch (error) {
-      console.error(error);
     }
-  }
 
-  useEffect(() => {
-    fetchData();
-  }, [{ draft }])
+    const  fetchData =  async()=> {
+      try {
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${draft}&appid=ed55b36e362d8733f7d859247cedeaf2&units=metric`)
+        setCities(response.data)
+      } catch (error) {
+        console.error(error);
+      }
+  }
+  
+ useEffect(()=>{
+  fetchData()
+})
+
 
   return (
     <section className={style.main}>
